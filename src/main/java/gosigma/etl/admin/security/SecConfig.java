@@ -71,7 +71,7 @@ public class SecConfig extends WebSecurityConfigurerAdapter {
 		http.headers().frameOptions().disable();
 		http.csrf().disable();
 
-		http.authorizeRequests().antMatchers("/login/**", "/test/**").permitAll();
+		http.authorizeRequests().antMatchers("/index.html", "/", "/login/**", "/test/**").permitAll();
 		http.authorizeRequests().anyRequest().authenticated();
 
 		// for customized login page works, may set /login controller and view

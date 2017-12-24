@@ -25,31 +25,24 @@ public class EtlDirConfiguration extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/etl_files/**").addResourceLocations("file:///" + _etlDir + "/");
 	}
 
-	// setup default index view for /
-	// index.html must put in /template folder
-	@Controller
-	public static class Routes {
-
-		@RequestMapping({ "/", "/default", "/index" })
-		public String index() {
-			return "index";
-		}
-	}
+	//	// setup default index view for /
+	//	// index.html must put in /template folder
+	//	@Controller
+	//	public static class Routes {
+	//
+	//		@RequestMapping({ "/", "/default", "/index" })
+	//		public String index() {
+	//			return "index";
+	//		}
+	//	}
 	
 	// setup default index.html for /
 	// index.html must put in /static folder
-	
-	//	@Configuration
-	//	public static class DefaultView extends WebMvcConfigurerAdapter{
-	//
-	//		@Override
-	//		public void addViewControllers( ViewControllerRegistry registry ) {
-	//			registry.addViewController( "/" ).setViewName( "forward:/index.html" );
-	//			// registry.addViewController( "/" ).setViewName( "forward:index" );
-	//			// registry.addViewController( "/" ).setViewName( "forward:/login" );
-	//			
-	//			registry.setOrder( Ordered.HIGHEST_PRECEDENCE );
-	//			super.addViewControllers( registry );
-	//		}
-	//	}
+	@Override
+	public void addViewControllers( ViewControllerRegistry registry ) {
+		registry.addViewController( "/" ).setViewName( "forward:/index.html" );
+
+		registry.setOrder( Ordered.HIGHEST_PRECEDENCE );
+		super.addViewControllers( registry );
+	}
 }

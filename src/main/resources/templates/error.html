@@ -1,11 +1,33 @@
+<!-- <html> -->
+<!-- <head> -->
+<!-- <title>Reading List</title> -->
+<!-- <link rel="stylesheet" th:href="@{/style.css}"></link> -->
+<!-- </head> -->
+
+<!-- <body> -->
+<!-- 	<h2>Error Page</h2> -->
+<!-- 	<p th:text="${error_message}"></p> -->
+<!-- </body> -->
+<!-- </html> -->
+
 <html>
 <head>
-<title>Reading List</title>
+<title>Oops!</title>
 <link rel="stylesheet" th:href="@{/style.css}"></link>
 </head>
+<html>
+<div class="errorPage">
+<span class="oops">Oops!</span><br/>
+<img th:src="@{/MissingPage.png}"></img>
+<p>There seems to be a problem with the page you requested
+(<span th:text="${path}"></span>).</p>
+<p th:text="${'Details: ' + message}"></p>
 
-<body>
-	<h2>Error Page</h2>
-	<p th:text="${error_message}"></p>
-</body>
+<p th:text="${'timestamp : ' + timestamp}"></p>
+<p th:text="${'status : ' + status}"></p>
+<p th:text="${'error : ' + error}"></p>
+<p th:text="${'Exception : ' + exception}"></p>
+<p th:text="${'trace : ' + trace}"></p>
+</div>
 </html>
+</html

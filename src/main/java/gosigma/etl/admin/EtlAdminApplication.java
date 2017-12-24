@@ -1,4 +1,4 @@
-package gosigma.etl_log;
+package gosigma.etl.admin;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -20,15 +20,15 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @SpringBootApplication
-public class EtlLogApplication implements ApplicationRunner {
-	public static Logger log = LoggerFactory.getLogger(EtlLogApplication.class);
+public class EtlAdminApplication implements ApplicationRunner {
+	public static Logger log = LoggerFactory.getLogger(EtlAdminApplication.class);
 
 	// public static String _etlDir = null;
 	@Value("${etl.dir}")
 	private String _etlDir;
 
 	public static void main(String[] args) {
-		SpringApplication.run(EtlLogApplication.class, args);
+		SpringApplication.run(EtlAdminApplication.class, args);
 	}
 
 	@Override

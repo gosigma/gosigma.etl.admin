@@ -38,3 +38,8 @@ set application.properties
     server.ssl.key-store-password: tomcat
     server.ssl.keyStoreType: PKCS12
     server.ssl.keyAlias: tomcat
+
+enable security logging/debugging, setup this @Configuration
+@Configuration
+@EnableWebSecurity(debug = true) // list all filters in context
+public class SecConfig extends WebSecurityConfigurerAdapter {

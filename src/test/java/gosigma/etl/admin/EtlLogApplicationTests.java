@@ -1,4 +1,4 @@
-package gosigma.etl_log;
+package gosigma.etl.admin;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,3 +1,6 @@
+for security testing, using firefox.. (Chrome sometimes got weird behavior)
+
+
 this project is spring boot project, for browse base ETL directory
 and check log/data files, setting.
 

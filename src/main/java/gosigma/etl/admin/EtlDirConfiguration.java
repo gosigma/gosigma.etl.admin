@@ -46,3 +46,4 @@ public class EtlDirConfiguration extends WebMvcConfigurerAdapter {
 		super.addViewControllers( registry );
 	}
 }
+
